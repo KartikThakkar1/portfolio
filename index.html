@@ -5,14 +5,13 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
 <head>
 	<title>Kartik Thakkar Portfolio</title>
 	<link rel="icon" href="images/me.jpg" type="image/ico">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-
+	<link rel="stylesheet" href="assets/css/custom.css" />
 </head>
 
 <body class="homepage is-preload">
@@ -34,18 +33,56 @@
 					<li><a href="#visuals">Visualizations</a></li>
 					<li><a href="#tl">Timeline</a></li>
 					<li><a href="#copyright">Contact</a></li>
-
 				</ul>
 			</nav>
 
 			<!-- Banner -->
-			<section id="banner">
-				<header>
-					<h2>Learning, Unlearning, Relearning.</h2>
-					<p>Data Analysis | Data Science | Natural Language Processing | Computer Vision | Machine & Deep
-						Learning</p>
-				</header>
-			</section>
+<section id="banner">
+  <header>
+    <h2>Learning, Unlearning, Relearning</h2>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-label="Capabilities">
+      <ul class="marquee__content">
+        <li>Artificial Intelligence</li>
+        <li>Natural Language Processing</li>
+		<li>Embeddings</li>
+		<li>RAG Pipelines</li>
+        <li>Machine Learning</li>
+        <li>Data Science</li>
+        <li>Dashboards &amp; Data Analytics</li>
+        <li>Large Language Models</li>
+        <li>Topic Modeling</li>
+		<li>Business &amp; Research Development</li>
+		<li>MLOps &amp; CI/CD</li>
+		<li>APIs</li>
+
+      </ul>
+      <!-- Duplicate for seamless loop -->
+      <ul class="marquee__content" aria-hidden="true">
+        <li>Artificial Intelligence</li>
+        <li>Natural Language Processing</li>
+		<li>Embeddings</li>
+		<li>RAG Pipelines</li>
+        <li>Machine Learning</li>
+        <li>Data Science</li>
+        <li>Dashboards &amp; Data Analytics</li>
+        <li>Large Language Models</li>
+        <li>Topic Modeling</li>
+		<li>Business &amp; Research Development</li>
+		<li>MLOps &amp; CI/CD</li>
+		<li>APIs</li>
+      </ul>
+    </div>
+
+    <div class="cta-group" style="margin-top:1rem;">
+      <a href="#projects" class="button primary">View Projects</a>
+      <a href="#copyright" class="button alt">Contact</a>
+    </div>
+  </header>
+</section>
+
+
 
 			<!-- Intro -->
 			<section id="intro" class="container">
@@ -58,11 +95,12 @@
 							<img src="images/USU.png" alt="USU Logo" style="width:220px; height:auto;">
 							<header>
 								<h2>Utah State University</h2>
-								<P>GPA: 3.85/4.0</P>
+								<P>Logan, Utah, United States of America</P>
 							</header>
 							<p>Master of Science, Computer Science</p>
-							<p>Logan, Utah, United States of America</p>
 							<p>Aug 2023 - Aug 2025</p>
+							<p>GPA: 3.87/4.0</p>
+							<p><em>Thesis: Social Media Mining for Extracting the Experiences of Neurodivergent individuals on Twitter and Reddit </em></p>
 						</section>
 					</div>
 					<div class="col-6 col-12-medium">
@@ -70,18 +108,18 @@
 							<img src="images/VIT.png" alt="VIT Logo" style="width:200px; height:auto;">
 							<header>
 								<h2>Vellore Institute of Technology</h2>
-								<p>GPA: 8.79/10.0</p>
+								<p>Bhopal, Madhya Pradesh, India</p>
+								
 							</header>
 							<p>Bachelor of Technology, Electronics and Communication Engineering.</p>
-							<p>Bhopal, Madhya Pradesh, India</p>
-							<p>July 2018 - Aug 2022
-							<p>
+							
+							<p>July 2018 - Aug 2022</p>
+							<p>GPA: 8.79/10.0</p>
+							
 						</section>
 					</div>
-
 				</div>
 				<footer>
-
 					<h3>Relevant Coursework</h3>
 					<div id="coursework">
 						<ul>
@@ -97,10 +135,7 @@
 					</div>
 				</footer>
 			</section>
-
 		</section>
-
-
 
 		<!-- Main -->
 		<section id="main">
@@ -108,339 +143,501 @@
 				<div class="row">
 					<div class="col-12">
 
+						<!-- Skills -->
+					<section id="skills">
+					<header class="major">
+						<h2>Skills</h2>
+					</header>
 
-						<section id="skills">
-							<header class="major">
-								<h2>Skills</h2>
-							</header>
-							<div class="row">
-								<div class="col-12">
-									<section class="skills">
-										<div id="skill-row">
-											<h5>Technical</h5>
-											<ul style="color: white;">Python | SQL | Java | Natural Language Processing | Machine Learning Algorithms | Neural Networks |
-												Regression Analysis | Predictive Analytics | Topic Modeling | Data Mining | Social Media Analysis |
-												Inferential Statistics | Data Transformation | ETL/ELT Workflows
-												</ul>
-										</div>
-
-										<div id="skill-row">
-											<h5>Packages & Tools</h5>
-											<ul style="color: white;"> Pandas | NumPy | dbt Cloud | PyMongo | TensorFlow | PyTorch | BeautifulSoup | 
-												OpenCV | Tableau | Matplotlib | NetworkX | Tweepy | X API | OpenAI API | 
-												SQLite | PostgreSQL | Google Bigquery | Google Sheets | Microsoft Excel | 
-												Git | GitHub
-
-											</ul>
-										</div>
-
-										<div id="skill-row">
-											<h5>Certifications & Online Learning</h5>
-											<ul style="color: white;" >Google Data Analytics Professional Certificate |
-												dbt Fundamentals (dbt Labs) |
-												Neural Networks and Deep Learning (Deeplearning.AI) |
-												Improving Deep Neural Networks: Hyperparameter Tuning, Regularization
-												and Optimization (Deeplearning.AI)</ul>
-										</div>
-
-									</section>
-								</div>
-							</div>
+					<div class="skills-grid">
+						<!-- AI & NLP / ML -->
+						<section class="box skill-card">
+						<div class="skill-icon"><span class="icon solid fa-brain"></span></div>
+						<h3>AI &amp; NLP / ML</h3>
+						<ul class="skill-tags">
+							<li>LLMs (OpenAI, Llama&nbsp;3)</li>
+							<li>RAG (LangChain)</li>
+							<li>FAISS/Chroma</li>
+							<li>Embeddings</li>
+							<li>Semantic search</li>
+							<li>Agents</li>
+							<li>Prompt design</li>
+							<li>scikit-learn</li>
+							<li>TensorFlow</li>
+							<li>PyTorch</li>
+							<li>XGBoost</li>
+							<li>Time-series</li>
+							<li>Eval (precision/recall, F1, AUC)</li>
+						</ul>
 						</section>
 
-						<!-- Portfolio -->
-						<section id="projects">
-							<header class="major">
-								<h2>Projects</h2>
-							</header>
-							<div class="row">
-								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
-
-										<header>
-											<h3>End-to-End Data Pipeline: United States Non-Immigrant Visa Analysis and Prediction</h3>
-										</header>
-										<p style="color: white ">
-
-											Led a 4-member team to collect, clean, and analyze extensive open data
-											for non-immigrant visa issuance to analyze global immigration to the United
-											States. <br>
-											Wrapped up by developing an end-to-end data transformation and prediction pipeline
-											leveraging dbt and Python to streamline data processing, feature engineering, and predictive modeling. 
-
-										</p>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1/Non-Immigrant-Visa-Analysis-and-H-1B-Visa-Prediction"
-														target="_blank" class="button alt">Click for more</a></li>
-											</ul>
-										</footer>
-									</section>
-									<section class="box">
-
-										<header>
-											<h3>Figuring out Neural Networks: Classifying Breast Cancer from Mammography
-												Images</h3>
-										</header>
-										<p style="color: white ">Trained a neural network to classify mammography images and compared
-											its performance with transfer learning approaches. Also compared results
-											with standard neural network architectures like ResNet50 and VGG16 used as
-											feature extractors and achieved a maximum recall for positive class of
-											82%.
-										</p>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1/Breast-Cancer-Image-Classification-on-Mammography-Images"
-														target="_blank" class="button alt">Click for more</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
-
-										<header>
-											<h3>Harry Potter and the Next Word: LSTM RNNs for predicting the next word +
-												Streamlit app interface</h3>
-										</header>
-										<p style="color: white "> Processed, prepared and cleaned text data (movie script lines) using
-											tecniques like tokenization, vocabulary creation,
-											one hot encoding, n-grams and word embeddings to predict the next word given
-											a sequence of words. A 2 layered stacked LSTM RNN was
-											trained on script lines from the famous Harry Potter Movie franchise to
-											predict next word. The model was tuned until a 15% increase in accuracy
-											and 32% decrease in loss was achieved. Finally, the model was intergrated
-											with a Streamlit web application.
-										</p>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1/Harry-Potter-and-the-Next-Word?tab=readme-ov-file"
-														target="_blank" class="button alt">Click for more</a></li>
-											</ul>
-										</footer>
-									</section>
-									<section class="box">
-
-										<header>
-											<h3>View More on my GitHub</h3>
-										</header>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1" target='_blank'
-														class="button alt">GitHub Profile</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
-
-										<header>
-											<h3>Maximize Marketing: A Data Analysis Case Study</h3>
-										</header>
-										<p style="color: white">Conducted comprehensive data analysis on fitness data to examine user
-											behavior and identify trends. Utilized MS Excel functionalities such as
-											Pivot Tables and
-											VLOOKUP, and SQL features including JOINS and Common Table Expressions to
-											clean, prepare, and query data.
-											Shared actionable insights and recommendations through Tableau Dashboards
-											and a GitHub Markdown report.</p>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1/data-analysis-marketing-case-study"
-														target="_blank" class="button alt">Click for more</a></li>
-											</ul>
-										</footer>
-									</section>
-									<section class="box">
-
-										<header>
-											<h3>Predicting with Volatility: Stacked LSTMS for AMZN price forecasting
-											</h3>
-										</header>
-										<p style="color: white ">The aim was to observe the ability of these
-											networks to forecast when there are sudden changes in the input sequence
-											values.
-											Trained a Stacked LSTM RNN to predict and forecast the opening price for the
-											AMZN stock. Utilized tiingo API to pull data. Achieved a RMSE value of 7.4
-											on test set and forecasted next 30 days.
-										</p>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://github.com/KartikThakkar1/LSTMs-and-volatile-stock-prices"
-														target="_blank" class="button alt">Click for more</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
-
-
-							</div>
+						<!-- Data Engineering & MLOps -->
+						<section class="box skill-card">
+						<div class="skill-icon"><span class="icon solid fa-cogs"></span></div>
+						<h3>Data Engineering &amp; MLOps</h3>
+						<ul class="skill-tags">
+							<li>ETL/ELT</li>
+							<li>Data validation</li>
+							<li>Schema/KPI docs</li>
+							<li>Lineage</li>
+							<li>Docker</li>
+							<li>CI/CD (GitHub Actions)</li>
+							<li>dbt</li>
+							<li>FastAPI</li>
+							<li>OpenAPI/Swagger</li>
+							<li>Monitoring/alerts</li>
+							<li>AWS (Lambda, S3)</li>
+							<li>Azure Blob</li>
+							<li>PostgreSQL</li>
+							<li>MySQL</li>
+							<li>BigQuery</li>
+						</ul>
 						</section>
+
+						<!-- Analytics & BI -->
+						<section class="box skill-card">
+						<div class="skill-icon"><span class="icon solid fa-chart-line"></span></div>
+						<h3>Analytics &amp; BI</h3>
+						<ul class="skill-tags">
+							<li>Tableau</li>
+							<li>Excel</li>
+							<li>Cohorts/segmentation</li>
+							<li>A/B testing</li>
+							<li>Hypothesis testing</li>
+							<li>KPI/metric design</li>
+							<li>Dashboards</li>
+							<li>Data storytelling</li>
+						</ul>
+						</section>
+
+						<!-- Languages & Tools -->
+						<section class="box skill-card">
+						<div class="skill-icon"><span class="icon solid fa-code"></span></div>
+						<h3>Languages &amp; Tools</h3>
+						<ul class="skill-tags">
+							<li>Python</li>
+							<li>SQL</li>
+							<li>Java</li>
+							<li>C</li>
+							<li>Git</li>
+							<li>Jupyter</li>
+							<li>Linux/bash</li>
+						</ul>
+						</section>
+					</div>
+					</section>
+
 
 					</div>
 
+					<!-- Projects (Masonry) -->
+					<section id="projects">
+					  <header class="major">
+					    <h2>Projects</h2>
+					  </header>
+
+					  <div class="row masonry">
+
+					    <!-- 6 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>AI Investment &amp; Capital Deals Memo Copilot for Financial Analysis</h3>
+					        </header>
+					        <p style="color: white">
+					          AI system that ingests financial PDFs and auto-generates investment memos. Uses a <b>RAG</b> pipeline
+					          (<b>LangChain</b> + <b>OpenAI</b> + <b>FAISS/Chroma</b>) with <b>AWS S3</b> storage and a <b>Streamlit</b> UI for
+					          extraction, document-aware Q&amp;A, and memo drafting, featuring <b>transparent agent execution</b>.
+					          Designed to reduce analyst prep time and improve consistency.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/ai_capital_deal_memo"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					   <!-- 7 — Summarize Anything -->
+<div class="col-4 col-6-medium col-12-small">
+  <section class="box column-break">
+    <header>
+      <h3> Summarize Anything: AI Content Compression - Summarization platform with Llama</h3>
+    </header>
+    <p style="color: white">
+      Drop in long-form content and get an <b>abstractive summary</b> of the essential points in seconds,
+      optimized for readability, powered by a <b>Llama&nbsp;3</b> based <b>summarizer</b>
+      and a <b>token-aware, cost-efficient orchestrator</b> that handles long-form inputs <b>without truncation</b>.
+    </p>
+    <footer>
+      <ul class="actions" style="display: flex; justify-content: center;">
+        <li><a href="https://github.com/KartikThakkar1/content-summarization-with-Llama3"
+               target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+      </ul>
+    </footer>
+  </section>
+</div>
+
+<!-- 8 — SaaS Churn -->
+<div class="col-4 col-6-medium col-12-small">
+  <section class="box column-break">
+    <header>
+      <h3>SaaS Customer Churn Prediction, End to End MLOps</h3>
+    </header>
+    <p style="color: white">
+      Built a <b>production-ready</b> churn prediction system for a SaaS dataset: clean/validate data,
+      engineer features, train &amp; compare models, and serve the best model via a <b>FastAPI</b> microservice.
+      Workflow is fully reproducible (<b>Docker</b> + <b>tests</b> + <b>CI/CD</b>) with <b>experiment tracking</b> and
+      basic <b>drift/performance monitoring</b>.
+    </p>
+    <footer>
+      <ul class="actions" style="display: flex; justify-content: center;">
+        <li><a href="https://github.com/KartikThakkar1/saas-churn-prediction"
+               target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+      </ul>
+    </footer>
+  </section>
+</div>
+
+
+					    <!-- 1 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>End-to-End Data Pipeline: United States Non-Immigrant Visa Analysis and Prediction</h3>
+					        </header>
+					        <p style="color: white">
+					          Led a 4-member team to ingest, clean, and analyze U.S. non-immigrant visa data to study immigration patterns.
+					          Built an end-to-end pipeline with <b>dbt</b> + <b>Python</b> for transformation, feature engineering, and <b>ML</b> prediction.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/Non-Immigrant-Visa-Analysis-and-H-1B-Visa-Prediction"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					    <!-- 2 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>Figuring out Neural Networks: Classifying Breast Cancer from Mammography Images</h3>
+					        </header>
+					        <p style="color: white">
+					          Built a mammography classifier and compared a custom network to transfer-learning baselines
+					          (<b>ResNet50</b>, <b>VGG16</b>). Achieved <b>82% recall</b> on the positive class using <b>deep learning</b> in <b>Python</b>.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/Breast-Cancer-Image-Classification-on-Mammography-Images"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					    <!-- 3 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>Harry Potter and the Next Word: LSTM RNNs + Streamlit</h3>
+					        </header>
+					        <p style="color: white">
+					          Processed movie script lines (tokenization, n-grams, <b>embeddings</b>) and trained a 2-layer stacked <b>LSTM</b>
+					          to predict the next word. Improved accuracy by <b>+15%</b> (loss −<b>32%</b>) and deployed with <b>Streamlit</b>.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/Harry-Potter-and-the-Next-Word?tab=readme-ov-file"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					    <!-- 4 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>Maximize Marketing: A Data Analysis Case Study</h3>
+					        </header>
+					        <p style="color: white">
+					          Analyzed fitness-app behavior; cleaned and joined data with <b>SQL</b> (CTEs, JOINs) and <b>Excel</b> (pivots, lookups).
+					          Communicated insights via <b>Tableau</b> dashboards and a GitHub write-up with recommendations.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/data-analysis-marketing-case-study"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					    <!-- 5 -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>Predicting with Volatility: Stacked LSTMs for AMZN Forecasting</h3>
+					        </header>
+					        <p style="color: white">
+					          Forecasted AMZN opening price with stacked <b>LSTMs</b> on <b>Tiingo API</b> data; achieved <b>RMSE 7.4</b> on test and generated 30-day forecasts.
+					        </p>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1/LSTMs-and-volatile-stock-prices"
+					                   target="_blank" rel="noopener noreferrer" class="button alt">Click for more</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					    <!-- 9 — last -->
+					    <div class="col-4 col-6-medium col-12-small">
+					      <section class="box">
+					        <header>
+					          <h3>I'm passionate about building AI and Data solutions that <span style="color:#fff;">solve real world problems.</span> I would love to contribute with teams that already do it at scale.</h3>
+					        </header>
+					        <footer>
+					          <ul class="actions" style="display: flex; justify-content: center;">
+					            <li><a href="https://github.com/KartikThakkar1" target="_blank" rel="noopener noreferrer" class="button alt">GitHub Profile</a></li>
+					          </ul>
+					        </footer>
+					      </section>
+					    </div>
+
+					  </div>
+					</section>
+
+					<!-- Dashboards & Visualizations -->
 					<div class="col-12">
-						<!-- Blog -->
-						<section id="visuals">
-							<header class="major">
-								<h2>Dashboards and Visualizations</h2>
-							</header>
-							<div class="row">
-								<div class="col-4 col-12-small">
-									<section class="box viz">
-										<a href="https://public.tableau.com/views/SmartDevicesSleepInsights/BellabeatSleepInsights?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-											target="_blank" class="image featured"><img src="images/viz11.png"
-												alt="" /></a>
-										<header>
-											<h3>User Sleep Insights: Wearable fitness devices</h3>
+					  <section id="visuals">
+					    <header class="major">
+					      <h2>Dashboards and Visualizations</h2>
+					    </header>
 
-										</header>
+					    <div class="row">
+					      <!-- NEW Card -->
+					      <div class="col-4 col-12-small">
+					        <section class="box viz">
+					          <a
+					            href="https://public.tableau.com/views/NeurodiverseRedditThemesTopics/ThemesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					            target="_blank" rel="noopener noreferrer"
+					            class="image featured"
+					          >
+					            <img src="images/viz44.png" alt="Neurodivergence across Reddit: Themes and Topics" loading="lazy" />
+					          </a>
+					          <header>
+					            <h3>Neurodivergence across Reddit: Themes and Topics</h3>
+					          </header>
+					          <footer>
+					            <ul class="actions" style="display: flex; justify-content: center;">
+					              <li>
+					                <a
+					                  href="https://public.tableau.com/views/NeurodiverseRedditThemesTopics/ThemesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					                  target="_blank" rel="noopener noreferrer"
+					                  class="button icon solid fa-file-alt"
+					                >Interact</a>
+					              </li>
+					            </ul>
+					          </footer>
+					        </section>
+					      </div>
 
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://public.tableau.com/views/SmartDevicesSleepInsights/BellabeatSleepInsights?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-														target="_blank"
-														class="button icon solid fa-file-alt">Interact</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-small">
-									<section class="box viz">
-										<a href="https://public.tableau.com/shared/44WSS5PWC?:display_count=n&:origin=viz_share_link"
-											target="_blank" class="image featured"><img src="images/viz22.png"
-												alt="" /></a>
-										<header>
-											<h3> United States Non Immigrant Visa Issuance : October-November FY2024
-											</h3>
+					      <!-- Card 2 -->
+					      <div class="col-4 col-12-small">
+					        <section class="box viz">
+					          <a
+					            href="https://public.tableau.com/views/SmartDevicesSleepInsights/BellabeatSleepInsights?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					            target="_blank" rel="noopener noreferrer"
+					            class="image featured"
+					          >
+					            <img src="images/viz11.png" alt="Tableau dashboard: user sleep insights from wearable devices" loading="lazy" />
+					          </a>
+					          <header>
+					            <h3>User Sleep Insights: Wearable fitness devices</h3>
+					          </header>
+					          <footer>
+					            <ul class="actions" style="display: flex; justify-content: center;">
+					              <li>
+					                <a
+					                  href="https://public.tableau.com/views/SmartDevicesSleepInsights/BellabeatSleepInsights?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					                  target="_blank" rel="noopener noreferrer"
+					                  class="button icon solid fa-file-alt"
+					                >Interact</a>
+					              </li>
+					            </ul>
+					          </footer>
+					        </section>
+					      </div>
 
-										</header>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://public.tableau.com/shared/44WSS5PWC?:display_count=n&:origin=viz_share_link"
-														target="_blank"
-														class="button icon solid fa-file-alt">Interact</a></li>
+					      <!-- Card 3 -->
+					      <div class="col-4 col-12-small">
+					        <section class="box viz">
+					          <a
+					            href="https://public.tableau.com/shared/44WSS5PWC?:display_count=n&:origin=viz_share_link"
+					            target="_blank" rel="noopener noreferrer"
+					            class="image featured"
+					          >
+					            <img src="images/viz22.png" alt="Tableau map: U.S. non-immigrant visa issuance (Oct–Nov FY2024)" loading="lazy" />
+					          </a>
+					          <header>
+					            <h3>United States Non-Immigrant Visa Issuance: October–November FY2024</h3>
+					          </header>
+					          <footer>
+					            <ul class="actions" style="display: flex; justify-content: center;">
+					              <li>
+					                <a
+					                  href="https://public.tableau.com/shared/44WSS5PWC?:display_count=n&:origin=viz_share_link"
+					                  target="_blank" rel="noopener noreferrer"
+					                  class="button icon solid fa-file-alt"
+					                >Interact</a>
+					              </li>
+					            </ul>
+					          </footer>
+					        </section>
+					      </div>
 
-											</ul>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-small">
-									<section class="box viz">
-										<a href="https://public.tableau.com/views/US-NonImmigrantVisas/NonImmigrantVisaIssuancesByNationality-FY24?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-											target="_blank" class="image featured"><img src="images/viz33.png"
-												alt="" /></a>
-										<header>
-											<h3> User Distribution & Categorization: Wellness Company Market
-											</h3>
-
-										</header>
-										<footer>
-											<ul class="actions" style="display: flex; justify-content: center;">
-												<li><a href="https://public.tableau.com/views/BellabeatSummary_17214536730830/SmartDevicesUserDistribution?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-														target="_blank"
-														class="button icon solid fa-file-alt">Interact</a></li>
-
-											</ul>
-										</footer>
-									</section>
-								</div>
-							</div>
-						</section>
-
-
+					      <!-- Card 4 -->
+					      <div class="col-4 col-12-small">
+					        <section class="box viz">
+					          <a
+					            href="https://public.tableau.com/views/BellabeatSummary_17214536730830/SmartDevicesUserDistribution?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					            target="_blank" rel="noopener noreferrer"
+					            class="image featured"
+					          >
+					            <img src="images/viz33.png" alt="Tableau dashboard: user distribution and categorization — wellness market" loading="lazy" />
+					          </a>
+					          <header>
+					            <h3>User Distribution &amp; Categorization: Wellness Company Market</h3>
+					          </header>
+					          <footer>
+					            <ul class="actions" style="display: flex; justify-content: center;">
+					              <li>
+					                <a
+					                  href="https://public.tableau.com/views/BellabeatSummary_17214536730830/SmartDevicesUserDistribution?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+					                  target="_blank" rel="noopener noreferrer"
+					                  class="button icon solid fa-file-alt"
+					                >Interact</a>
+					              </li>
+					            </ul>
+					          </footer>
+					        </section>
+					      </div>
+					    </div>
+					  </section>
 					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- Footer -->
-		<section id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-8 col-12-medium">
-						<section id="tl">
-							<header>
-								<h2>Timeline</h2>
-							</header>
-							<ul class="dates">
+					<!-- Footer -->
+					<section id="footer">
+					  <div class="container">
+					    <div class="row">
+					      <!-- Timeline -->
+					      <div class="col-8 col-12-medium">
+					        <section id="tl">
+					          <header>
+					            <h2>Timeline</h2>
+					          </header>
+					          <ul class="dates">
 								<li>
-									<span class="date">Jul<strong>2024</strong></span>
-									<h3><a href="https://dsa.cs.usu.edu/people.html">Data Scientist at Data Science and Applications Lab</a></h3>
-									<p>Presently working with Dr. Hamid Karimi @ DSA Lab since July 2024</p>
-								</li>
+					              <span class="date">Aug<strong>2025</strong></span>
+					              <h3><a>Graduated, Master's of Science, Computer Science</a></h3>
+					              <p>Seeking full time opportunities across AI, Data, Software, and Tech</p>
+					            </li>
 								<li>
-									<span class="date">Jan<strong>2024</strong></span>
-									<h3><a href="#">Graduate Research and Teaching Assistant at Computing Elevated Labs,
-											USU</a></h3>
-									<p>Worked under Dr. Steve Petruzza on developing an Image Segmentation tool</p>
-								</li>
+					              <span class="date">Jul<strong>2025</strong></span>
+					              <h3><a>Successfully defended Master's Thesis</a></h3>
+					              <p>Research: Social Media Mining for Extracting the Experiences of Neurodivergent individuals on Twitter and Reddit</p>
+					            </li>
+					            <li>
+					              <span class="date">Jul<strong>2024</strong></span>
+					              <h3><a href="https://dsa.cs.usu.edu/people.html" target="_blank" rel="noopener noreferrer">Data Scientist at Data Science and Applications Lab</a></h3>
+					              <p>Presently working with Dr. Hamid Karimi, researching on AI for Social Good</p>
+					            </li>
+					            <li>
+					              <span class="date">Jan<strong>2024</strong></span>
+					              <h3><a href="#">Graduate Research and Teaching Assistant at Computing Elevated Labs, USU</a></h3>
+					              <p>Worked under Dr. Steve Petruzza on developing an Image Segmentation tool</p>
+					            </li>
+					            <li>
+					              <span class="date">Aug<strong>2023</strong></span>
+					              <h3><a href="#">Computer Science Graduate Student at Utah State University, Logan, UT, USA</a></h3>
+					              <p>Expected Graduation: Aug 2025</p>
+					            </li>
+					            <li>
+					              <span class="date">Sep<strong>2022</strong></span>
+					              <h3><a href="#">Data Analyst at Saara.io, Bangalore, KA, India</a></h3>
+					              <p>Worked as Data Analyst from September 2022 to February 2023</p>
+					            </li>
+					            <li>
+					              <span class="date">Aug <strong>2022</strong></span>
+					              <h3><a href="#">Graduated from Vellore Institute of Technology, Bhopal, MP, India</a></h3>
+					              <p>B.Tech in Electronics and Communication Engineering</p>
+					            </li>
 								<li>
-									<span class="date">Aug<strong>2023</strong></span>
-									<h3><a href="#">Computer Science Graduate Student at Utah State University, Logan,
-											UT, USA</a></h3>
-									<p>Expected Graduation: Aug 2025</p>
-								</li>
-								<li>
-									<span class="date">Sep<strong>2022</strong></span>
-									<h3><a href="#">Data Analyst at Saara.io, Bangalore, KA, India</a></h3>
-									<p>Worked as Data Analyst from September 2022 to February 2023</p>
-								</li>
-								<li>
-									<span class="date">Aug <strong>2022</strong></span>
-									<h3><a href="#">Graduated from Vellore Institute of Technology, Bhopal, MP,
-											India</a></h3>
-									<p>B.Tech in Electronics and Communication Engineering</p>
-								</li>
-								<li>
-									<span class="date">July <strong>2018</strong></span>
-									<h3><a href="#">Electronics and Communication Engineering Student at Vellore
-											Institute of Technology, Bhopal, MP, India</a></h3>
-									<p>4 Year Undergraduate Degree</p>
-								</li>
+					              <span class="date">Mar<strong>2022</strong></span>
+					              <h3><a href="#">Intern Data Scientist at Bariflo Cybernetics, India</a></h3>
+								  <p>March 2022 - June 2022</p>
+					            </li>
+					            <li>
+					              <span class="date">July <strong>2018</strong></span>
+					              <h3><a href="#">Electronics and Communication Engineering Student at Vellore Institute of Technology, Bhopal, MP, India</a></h3>
+					              <p>4 Year Undergraduate Degree</p>
+					            </li>
+					          </ul>
+					        </section>
+					      </div>
 
-							</ul>
-						</section>
-					</div>
-					<div class="col-4 col-12-medium">
-						<section class="more-about-me-container">
-							<header>
-								<h2>More about me</h2>
-							</header>
-							<a href="#" class="image featured"><img src="images/me.jpg" alt="" /></a>
-							<p>
-								I am constantly learning. Something new, something old, going back in time to unlearn
-								and relearn. My mind is always on, always looking for a new idea and a better approach.
-								I enjoy learning about and working with the tools and algorithms that allow me to use
-								and leverage data. If you think we can work together on something, please feel free to
-								reach out.
-							</p>
+					      <!-- More about me -->
+					      <div class="col-4 col-12-medium">
+					        <section class="more-about-me-container">
+					          <header><h2>More about me</h2></header>
+					          <div class="image featured">
+					            <img src="images/me.jpg" alt="Kartik Thakkar headshot" loading="lazy" />
+					          </div>
+					          <p>
+					            I am constantly learning—sometimes new, sometimes old, unlearning and relearning. I’m always looking for new ideas and better approaches. I enjoy the tools and algorithms that let me use and leverage data. If you think we can work together on something, please reach out.
+					          </p>
+					        </section>
+					      </div>
 
-						</section>
-					</div>
-					<div class="col-12">
+					      <!-- Contact -->
+					      <div class="col-12">
+					        <div id="copyright">
+					          <h2 style="margin-bottom: 50px;">Contact</h2>
+					          <h3 style="margin-bottom: 10px;">thakkarkartik30@gmail.com</h3>
+					          <h4 style="margin-bottom: 10px;">
+					            <a
+					              href="https://public.tableau.com/app/profile/kartik.thakkar/vizzes"
+					              target="_blank" rel="noopener noreferrer"
+					            >My Tableau Profile</a>
+					          </h4>
 
-						<!-- Copyright -->
-						<div id="copyright">
-							<h2 style="margin-bottom: 50px;">Contact</h2>
-							<h3 style="margin-bottom: 10px;">thakkarkartik30@gmail.com</h3>
-							<h4 style="margin-bottom: 10px;"><a
-									href="https://public.tableau.com/app/profile/kartik.thakkar/vizzes"
-									target="_blank">My Tableau Profile</a></h4>
+					          <ul class="links">
+					            <li>
+					              <a class="icon brands fa-linkedin-in"
+					                 href="https://www.linkedin.com/in/kartik-thakkar88"
+					                 target="_blank" rel="noopener noreferrer">
+					                <span class="label">LinkedIn</span>
+					              </a>
+					            </li>
+					            <li>
+					              <a class="icon brands fa-github"
+					                 href="https://github.com/KartikThakkar1"
+					                 target="_blank" rel="noopener noreferrer">
+					                <span class="label">GitHub</span>
+					              </a>
+					            </li>
+					          </ul>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
 
-							<ul class="links">
-								<li><a class="icon brands fa-linkedin-in"
-										href="https://www.linkedin.com/in/kartik-thakkar88" target="_blank"><span
-											class="label">LinkedIn</span></a></li>
-								<li><a class="icon brands fa-github" href="https://github.com/KartikThakkar1"
-										target="_blank"><span class="label">GitHub</span></a></li>
-
-
-							</ul>
-						</div>
-
-					</div>
 				</div>
 			</div>
 		</section>
@@ -455,7 +652,5 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<!-- <script src="script.js"></script> -->
-
 </body>
-
 </html>
