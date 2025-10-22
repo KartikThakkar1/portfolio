@@ -749,3 +749,91 @@
 #banner .hero-panel .hero-actions .button {
   margin-bottom: 0 !important;
 }
+
+
+/* ===== Banner stability patch (paste at end) ===== */
+
+/* 1) Lock the headline a bit tighter so it doesn't balloon/shrink too much */
+#banner header.hero h2{
+  font-size: clamp(1.55rem, 1.1vw + 1.05rem, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+/* 2) Consistent grid widths by breakpoint (photo / badge / hero) */
+@media (min-width: 1280px){
+  #banner .hero-row{
+    grid-template-columns: 22rem 22rem 1fr;
+    gap: 1.75rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+  #banner .hero-row{
+    grid-template-columns: 18rem 20rem 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1023px){
+  #banner .hero-row{
+    grid-template-columns: 16rem 18rem 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* 3) Make the three columns equal height and reduce jumpiness */
+#banner .hero-row{ align-items: stretch; }
+#banner .photo-card,
+#banner .event-badge,
+#banner header.hero{
+  display: flex;
+  flex-direction: column;
+}
+#banner header.hero{ justify-content: space-between; }
+
+/* Reserve vertical space so text/chips/buttons don't cause reflow */
+#banner header.hero{ min-height: 300px; }
+#banner .event-badge{ min-height: 300px; }
+#banner .photo-card{ min-height: 300px; }
+
+/* 4) Fix the image ratio and reserve space even before it loads */
+#banner .photo-card{ aspect-ratio: 4 / 5; }  /* adjust if you prefer another ratio */
+#banner .photo-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 5) Keep badge sizing steady */
+#banner .event-badge{
+  min-width: 18rem;
+  padding: 1.2rem 1.25rem;
+}
+#banner .event-badge .event-tag{ font-size: clamp(1.7rem, 1.2vw + 1.2rem, 2.2rem); }
+#banner .event-badge .event-sub{ font-size: 1rem; }
+
+/* 6) Keep marquee to a single stable line */
+#banner .marquee{ min-height: 2.25rem; }
+#banner .marquee__content{ align-items: center; }
+#banner .marquee__content li{
+  font-size: .95rem;
+  line-height: 1;
+  padding: .35rem .65rem;
+}
+
+/* 7) Buttons: consistent size everywhere */
+#banner .button,
+#banner a.button{
+  font-size: 1.05rem;
+  padding: .95rem 1.25rem;
+}
+#banner .cta-group{ margin-top: auto; }
+
+/* 8) Stack cleanly on small screens */
+@media (max-width: 899px){
+  #banner .hero-row{ grid-template-columns: 1fr; gap: 1rem; }
+  #banner .photo-card{ height: 220px; }     /* fixed height when stacked */
+  #banner header.hero,
+  #banner .event-badge{ min-height: unset; }
+}
