@@ -182,6 +182,21 @@
   text-align: center;
 }
 
+/* Shared heading styling (keep this) */
+#banner header h2{
+  font-weight: 800;
+  line-height: 1.2;          /* 1.15–1.25 is the sweet spot for big titles */
+  letter-spacing: -0.01em;   /* slight tightening looks cleaner */
+  color:#fff;
+  margin: 0 0 .6rem;
+  max-width: 28ch;           /* keeps it to ~2–3 lines; remove if you want one-line */
+}
+
+/* --- Size presets: choose ONE --- */
+
+/* 1) Compact (shorter, tidy) */
+#banner header h2{ font-size: clamp(1.4rem, 1.6vw + .8rem, 2.0rem); }
+
 /* Marquee: make sure it doesn't force extra width */
 #banner .marquee{
   width: 100%;
@@ -192,4 +207,545 @@
 #banner .marquee__content li{
   font-size: .95rem;
   padding: .35rem .7rem;
+}
+
+
+
+/* Wider banner panel + tidy H2 size */
+#banner header{
+  max-width: min(92vw, 80rem);   /* widen the black box */
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+
+#banner header h2{
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.45rem, 1.4vw + 1rem, 2.15rem); /* smaller but bold */
+  margin: 0 0 .85rem;
+  max-width: 34ch; /* keeps to ~2–3 lines; remove if you want longer */
+}
+
+/* Marquee tweaks: make edge fade gentler + avoid first chip being hidden */
+#banner .marquee{
+  --gap: 1.1rem;
+  /* gentler fade; or set to 'none' if you prefer no fade */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image:         linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  margin-top: .5rem;
+}
+
+/* slight left padding so the first chip doesn’t sit under the fade */
+#banner .marquee__content{
+  padding-left: .5rem;
+}
+
+/* chip size/spacing */
+#banner .marquee__content li{
+  font-size: .95rem;
+  padding: .32rem .65rem;
+}
+
+/* optional: slower/smoother scroll (or speed it up by lowering the number) */
+#banner .marquee__content{ animation-duration: 20s; }
+
+
+
+/* Keep page from side-scrolling */
+#page-wrapper { overflow-x: hidden; }
+
+/* Wider, centered hero box */
+#banner header.hero{
+  max-width: min(92vw, 80rem);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* Two-column layout in the banner */
+#banner .hero-grid{
+  display: grid;
+  grid-template-columns: auto 1fr;  /* left badge, right content */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Conference badge */
+#banner .event-callout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: .9rem 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+#banner .event-tag{
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: #f3d08a; /* your accent */
+  font-size: clamp(1.4rem, 2.2vw + .6rem, 2.2rem);
+  line-height: 1;
+}
+
+#banner .event-sub{
+  color: #eaeaea;
+  opacity: .9;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+#banner .button.small{
+  padding: .5rem .85rem;
+  font-size: .9rem;
+}
+
+/* Right side: headline + marquee + ctas */
+#banner .hero-main h2{
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.45rem, 1.4vw + 1rem, 2.15rem);
+  margin: 0 0 .7rem;
+  max-width: 34ch;    /* keeps to ~2–3 lines */
+}
+
+/* Marquee tweaks so it sits nicely */
+#banner .marquee{
+  --gap: 1.1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image:         linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  margin-top: .4rem;
+  width: 100%;
+}
+
+#banner .marquee__content{ padding-left: .5rem; }
+#banner .marquee__content li{
+  font-size: .95rem;
+  padding: .32rem .65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #f3d08a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Highlight #SHPE2025 chips if you keep them in the marquee */
+#banner .marquee__content li.highlight{
+  background: #f3d08a;
+  color: #1e1e1e;
+  border-color: transparent;
+}
+
+/* Responsive: stack badge above text on small screens */
+@media (max-width: 860px){
+  #banner .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #banner .hero-main h2{ max-width: none; text-align: center; }
+  #banner .event-callout{ margin: 0 auto; }
+}
+
+
+
+/* Prevent horizontal scroll just in case */
+#page-wrapper { overflow-x: hidden; }
+
+/* Row that holds the left badge and the right hero panel */
+#banner .hero-row{
+  max-width: min(96vw, 88rem);          /* wide enough to fit badge + panel */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);  /* left = auto, right grows */
+  align-items: center;
+  gap: 1.25rem;                          /* space between badge and panel */
+  padding: 0 1rem;                       /* keeps things off page edge */
+  box-sizing: border-box;
+}
+
+/* Black hero panel (right side) */
+#banner header.hero{
+  background: rgba(0,0,0,.82);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 1.2rem 1.25rem;
+  color: #fff;
+}
+
+#banner header.hero h2{
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.45rem, 1.4vw + 1rem, 2.15rem);
+  margin: 0 0 .7rem;
+  max-width: 34ch;                       /* keeps to ~2–3 lines */
+}
+
+/* Marquee (same behavior, tuned for this layout) */
+#banner .marquee{
+  --gap: 1.1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image:         linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  margin-top: .4rem;
+  width: 100%;
+}
+#banner .marquee__content{ padding-left: .5rem; }
+#banner .marquee__content li{
+  font-size: .95rem;
+  padding: .32rem .65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #f3d08a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Left, outside badge — larger than before */
+#banner .event-badge{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  min-width: 16rem;                      /* bigger badge */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .55rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+#banner .event-tag{
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: #f3d08a;
+  font-size: clamp(1.6rem, 2.6vw + .6rem, 2.6rem);
+  line-height: 1;
+}
+#banner .event-sub{
+  color: #eaeaea;
+  opacity: .9;
+  font-weight: 600;
+  font-size: 1rem;
+}
+#banner .button.small{ padding:.55rem .9rem; font-size:.95rem; }
+
+/* Mobile: stack the badge above the hero panel */
+@media (max-width: 900px){
+  #banner .hero-row{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #banner .event-badge{ min-width: auto; margin: 0 auto; }
+  #banner header.hero h2{ max-width: none !important; line-height: 1.18; text-wrap: balance; }
+}
+
+#banner header.hero-main h2{
+  max-width: none;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+
+
+/* Center the whole banner row and control widths */
+#banner .hero-row{
+  max-width: min(92vw, 1200px);  /* pull the whole unit back to true center */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 26rem 1fr; /* fixed left badge width, flexible hero */
+  gap: 2rem;
+  align-items: stretch;            /* lets badge match hero height if wanted */
+}
+
+/* Black hero panel */
+#banner header.hero{
+  background: rgba(0,0,0,.82);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  color: #fff;
+  text-align: center;              /* center headline + chips + CTAs */
+}
+
+/* HEADLINE: one line on desktop, highlight roles */
+#banner header.hero h2{
+  margin: 0 0 .7rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  max-width: none !important;      /* remove previous cap */
+  white-space: nowrap;             /* force single line on large screens */
+  text-wrap: balance;
+}
+
+#banner header.hero .accent-roles{
+  color: #f3d08a;                  /* same yellow as chips/badge */
+}
+
+/* Allow wrapping again on smaller screens */
+@media (max-width: 1200px){
+  #banner header.hero h2{ white-space: normal; }
+}
+
+/* BADGE OPTIONS ----------------------------------------------------------- */
+/* Option A: badge grows to same height as the hero panel */
+#banner .event-badge{
+  min-width: 26rem;                /* matches grid column above */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .6rem;
+  padding: 1.25rem 1.4rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+}
+
+/* If you prefer a *square* badge instead of matching height, uncomment:  */
+/* #banner .event-badge{ aspect-ratio: 1 / 1; align-self: center; }       */
+
+/* Badge text sizes (bigger than before) */
+#banner .event-tag{
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: #f3d08a;
+  font-size: clamp(1.8rem, 2.7vw + .6rem, 3rem);
+  line-height: 1;
+  text-align: center;
+}
+#banner .event-sub{
+  color: #eaeaea;
+  opacity: .9;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+}
+#banner .button.small{ padding:.6rem .95rem; font-size:1rem; }
+
+/* Mobile: stack and center */
+@media (max-width: 900px){
+  #banner .hero-row{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #banner .event-badge{ min-width: auto; margin: 0 auto; }
+  #banner header.hero h2{ white-space: normal; }
+}
+
+
+
+/* Make room for: [photo] [badge] [hero] */
+#banner .hero-row{
+  max-width: min(94vw, 1400px);          /* a touch wider to fit the new column */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(18rem, 24rem) 26rem 1fr; /* photo / badge / hero */
+  gap: 2rem;
+  align-items: stretch;                   /* makes all columns the same height */
+}
+
+/* Photo card matches your glass style and clips image corners */
+#banner .photo-card{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  overflow: hidden;                       /* round the image corners too */
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+}
+
+/* Fill the available area without distortion */
+#banner .photo-card img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                      /* crops to fill */
+  object-position: center;                /* tweak if needed (e.g., 'top center') */
+}
+
+/* Slightly tighter at large tablets */
+@media (max-width: 1200px){
+  #banner .hero-row{
+    grid-template-columns: minmax(14rem, 22rem) 24rem 1fr;
+  }
+}
+
+/* Mobile: stack photo → badge → hero; photo gets a fixed height */
+@media (max-width: 900px){
+  #banner .hero-row{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #banner .photo-card{ height: 220px; }   /* adjust to taste */
+}
+
+/* Make the banner unit a bit narrower and give the right side more air */
+@media (min-width: 901px){
+  #banner .hero-row{
+    max-width: min(90vw, 1360px);   /* was min(94vw, 1400px) */
+    margin-left: clamp(16px, 4vw, 56px);
+    margin-right: clamp(6px, 1.5vw, 20px);
+  }
+}
+
+
+/* ===== HERO polish: align buttons & spacing ===== */
+
+/* Make the badge card and the black panel use a column layout */
+#banner .conf-badge,
+#banner .hero-panel{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push the buttons down toward the bottom of each card/panel */
+#banner .conf-badge .button{              /* badge CTA */
+  margin-top: auto;                        /* sits at bottom of the badge */
+  align-self: center;                      /* centered horizontally */
+  margin-bottom: 1.0rem;                   /* bottom breathing room */
+}
+
+#banner .hero-panel .hero-actions{         /* View Projects + Contact */
+  margin-top: auto;                        /* push actions to bottom of panel */
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;                 /* center horizontally in panel */
+  padding-bottom: 0.75rem;                 /* bottom breathing room */
+}
+
+/* Unify button sizing/typography across badge & panel */
+#banner .conf-badge .button,
+#banner .hero-panel .hero-actions .button{
+  font-size: 1rem;                         /* same text size */
+  line-height: 1;                          /* crisp */
+  padding: 0.9rem 1.25rem;                 /* same paddings */
+  border-radius: 10px;                     /* same rounding */
+}
+
+/* Add extra space between the hero headline and the marquee chips */
+#banner .chip-marquee{
+  margin-top: 3rem;                      /* increase if you want more gap */
+}
+
+/* Optional: ensure the panel has a bit of minimum vertical room so the
+   "push to bottom" effect always has space to work on tall/wide screens */
+@media (min-width: 901px){
+  #banner .hero-panel{
+    min-height: 280px;                     /* adjust 260–320px to taste */
+  }
+}
+
+
+/* === Banner CTA alignment + size normalization === */
+
+/* 1) Same font-size + padding for all three buttons */
+#banner .conf-badge .button,
+#banner .hero-panel .hero-actions .button{
+  font-size: 1.125rem !important;        /* unify text size */
+  line-height: 1 !important;
+  padding: 0.95rem 1.35rem !important;    /* unify padding */
+  border-radius: 10px;                    /* same rounding */
+}
+
+/* 2) Put the buttons on the same baseline */
+#banner .conf-badge,
+#banner .hero-panel{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.25rem;                /* same bottom padding */
+}
+
+/* push each group of buttons to the bottom */
+#banner .conf-badge .button{
+  margin-top: auto;                       /* sits at bottom of badge */
+  margin-bottom: 0;                       /* no extra offset */
+  align-self: center;                     /* center horizontally */
+}
+
+#banner .hero-panel .hero-actions{
+  margin-top: auto;                       /* pushes action row down */
+  padding-bottom: 0;                      /* align with badge bottom */
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+/* 3) (Optional) ensure both blocks have enough height so the
+      "push to bottom" effect lines up nicely on wide screens */
+@media (min-width: 901px){
+  #banner .conf-badge,
+  #banner .hero-panel{
+    min-height: 300px;                    /* adjust 280–320px as you like */
+  }
+}
+
+
+
+/* =========================
+   Banner CTA: make sizes match and align bottoms
+   ========================= */
+
+/* Unify typography + padding for every banner button */
+#banner .button,
+#banner a.button,
+#banner .hero-panel .hero-actions .button,
+#banner .conf-badge .button,
+#banner .conf-badge a.button,
+#banner .conf-badge .conf-cta {
+  font-size: 1.125rem !important;       /* same text size everywhere */
+  line-height: 1 !important;
+  padding: 0.95rem 1.35rem !important;   /* same paddings */
+  border-radius: 10px !important;
+}
+
+/* Make the layout containers “flex columns” so we can push CTAs down */
+#banner .hero-wrap > .banner-headshot,
+#banner .hero-wrap > .conf-badge,
+#banner .hero-wrap > .hero-panel {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Put the badge button at the bottom */
+#banner .conf-badge .conf-cta,
+#banner .conf-badge .button:last-of-type {
+  margin-top: auto !important;
+  align-self: center;                    /* keep it centered on the badge */
+}
+
+/* Put the panel buttons at the bottom and center the row */
+#banner .hero-panel .hero-actions {
+  margin-top: auto !important;
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+/* Give badge + panel a similar minimum height so baselines match */
+@media (min-width: 901px) {
+  #banner .conf-badge,
+  #banner .hero-panel {
+    min-height: 300px;                   /* adjust 280–320px if you like */
+    padding-bottom: 1.25rem;             /* equal bottom breathing room */
+  }
+}
+
+/* In case the theme downscales buttons inside the badge via em sizing */
+#banner .conf-badge {
+  font-size: 1rem !important;            /* neutralize inherited shrinkage */
+}
+
+/* Ensure panel CTAs don’t get extra margins from theme */
+#banner .hero-panel .hero-actions .button {
+  margin-bottom: 0 !important;
 }
